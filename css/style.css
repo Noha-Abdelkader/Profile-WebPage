@@ -1,0 +1,777 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url(../Source_Sans_Pro/SourceSansPro-Regular.ttf);
+}
+
+:root {
+    --mainColr: #fff;
+    --secColor: #ff305b;
+    --thirdColor: #f1f1f1;
+    --forthColor: #555555;
+    --fifthColor: #333333;
+}
+
+/* ------------------------------------------------- */
+/* -------- START NAVBAR------------------------------------------------- */
+nav{
+    z-index: 1000;
+    background-color: transparent;
+}
+.navbar {
+    letter-spacing: 0.05rem;
+    font-size: 1.1rem;
+}
+
+#logo {
+    color: var(--secColor);
+}
+
+#navbarSupportedContent a.active {
+    color: var(--secColor);
+}
+
+.navbar .navbar-toggler {
+    border: none !important;
+}
+
+.navbar .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar [class='nav-link']:hover {
+    color: var(--secColor);
+}
+
+.navbar [class='nav-link'] {
+    color: var(--mainColr);
+    background: none;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+@media screen and (max-width:768px) {
+    .navbar-nav {
+        align-items: center !important;
+    }
+}
+
+@media screen and (min-width:1401px) and (max-width:1550px) {
+    .navbar>.container {
+        width: 75%;
+    }
+}
+
+
+/* -------- END NAVBAR------------------------------------------------- */
+
+
+
+
+/* ---- START HOME SECTION ------------------------------------------------- */
+#Home {
+    background-image: url('../images/slider-01.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
+#layer {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#Home h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--secColor)
+}
+#Home #headAnimate{
+    animation: typing 3.5s ease-in infinite , ruler 0.5s ease infinite;
+    /* animation-fill-mode: forwards; */
+    /* animation-direction: alternate; */
+    overflow: hidden;
+    margin: 0 auto;
+    white-space: nowrap; 
+    letter-spacing: 0.2rem;
+}
+
+@keyframes typing {
+    0%{ width:0 ;background-color: #a94442;}
+    100% { width: 100% ; background-color: yellow;}
+}
+@keyframes ruler {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+}
+
+/* ---- END HOME SECTION ------------------------------------------------- */
+
+
+/* ------------ START ABOUT SECTION------------------------------------------------------------------------ */
+#About {
+    color: var(--forthColor);
+}
+
+#aboutList span {
+    font-weight: 800;
+    margin-right: 0.25rem;
+    color: black;
+}
+
+#aboutRightSec p {
+    font-size: 1.1rem;
+}
+
+#aboutList li {
+    margin-bottom: 0.25rem;
+}
+
+#About #aboutBtns button {
+    background-color: var(--secColor);
+    font-weight: 600;
+    transition: all 0.5s;
+}
+
+#About #aboutBtns button:hover {
+    background-color: red;
+}
+
+#About #aboutList a {
+    color: var(--forthColor);
+}
+
+
+#aboutHead::before {
+    content: '';
+    width: .25rem;
+    height: 1.3rem;
+    background-color: var(--secColor);
+    display: inline-block;
+    margin-right: .5rem;
+}
+
+#aboutImgLayer {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0%;
+}
+
+#aboutLeft:hover #aboutImgLayer {
+    opacity: 1 !important;
+    height: 100%;
+}
+
+#aboutImgLayer i:hover {
+    color: var(--secColor) !important;
+}
+
+@media screen and (min-width:992px) {
+    #aboutLeftSec {
+        border: 0.5rem solid rgb(82, 79, 79);
+        border-radius: 0.25rem;
+    }
+
+    #aboutLeft {
+        position: relative;
+        transform: translateX(20px) translateY(20px);
+        /* border: 0.5rem solid rgb(82, 79, 79);
+        border-radius: 0.25rem; */
+    }
+
+
+}
+
+@media screen and (min-width:600px) and (max-width:768px) {
+    #About {
+        width: 80%;
+        margin: auto;
+    }
+
+}
+
+@media screen and (min-width:769px) and (max-width:992px) {
+    #About {
+        width: 100%;
+    }
+
+    #aboutRightSec {
+        line-height: 1.9rem !important;
+
+    }
+
+    #aboutBtns {
+        display: flex;
+    }
+
+    #aboutList span {
+        margin-right: 0.1rem;
+
+    }
+
+}
+
+/* --------------- END ABOUT SECTION------------------------------------------------------------------------ */
+
+
+
+
+/* ---- START HEADER OF SECTIONS ------------------------------------------------ */
+
+.header>h2 {
+    font-size: 2.5rem;
+    position: relative;
+    font-weight: 800;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+    display: inline-block;
+    border-bottom: var(--secColor) 2px solid;
+}
+
+.header>h2::before {
+    content: '';
+    display: inline-block;
+    width: 30%;
+    height: 0.75px;
+    background-color: var(--secColor);
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header>h2::after {
+    content: '';
+    display: inline-block;
+    width: 30%;
+    height: 1px;
+    background-color: var(--secColor);
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* -------- END HEADER OF SECTIONS ------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+/* ------ START OUR SERVICE SECTION-----------------------------------------------------------------------  */
+#Services {
+    background-color: var(--thirdColor);
+}
+
+
+
+#ourService .row>div {
+    transition: all 0.5s;
+}
+
+#ourService .row>div:hover {
+    box-shadow: 0 0px 20px 7px rgba(0, 0, 0, 0.1);
+    background-color: var(--mainColr);
+}
+
+#ourService .row>div:hover i {
+    transform: scale(1.2);
+}
+
+#ourService .row>div i {
+    transition: all 0.5s;
+
+}
+
+#ourService .row i {
+    color: var(--secColor);
+}
+
+@media screen and (min-width:500px) and (max-width:768px) {
+    #ourService .row {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+
+
+
+
+/* ------ END OUR SERVICE SECTION-----------------------------------------------------------------------  */
+
+/* ------ START OUR PORTFOLIO SECTION----------------------------------------------------------- */
+
+#Portfolio .nav-pills .nav-link.active {
+    color: var(--secColor) !important;
+    background-color: var(--mainColr);
+}
+
+#Portfolio [class='nav-link'] {
+    color: var(--fifthColor) !important;
+}
+
+#Portfolio [id=overLayerPortofolio] {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+#Portfolio #overLayerPortofolio i {
+    color: var(--secColor);
+    cursor: pointer;
+}
+
+#Portfolio #profolioItem:hover [id=overLayerPortofolio] {
+    opacity: 1;
+}
+#Portfolio .layer{
+    z-index: 100;
+    padding: 2rem;
+    margin: auto;
+    display: none; 
+}
+
+#Portfolio .layer #imgContainer{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    margin: auto;
+    height: 50%;
+}
+#Portfolio .layer #imgContainer i.fa-regular.fa-circle-xmark{
+position: absolute;
+top: 0;
+right: 0;
+}
+#Portfolio .layer  #imgContainer  i.fa-regular.fa-circle-right{
+position: absolute;
+right: 0;
+top: 50%;
+transform: translateY(-50%);
+}
+#Portfolio .layer i{
+    cursor: pointer;
+    padding: 1rem;
+    color: var(--secColor);
+}
+
+@media screen and (min-width:600px) and (max-width:992px) {
+.layer #imgContainer{
+width: 50% !important;
+height: 50% !important;
+}
+
+}
+@media screen and (min-width:993px) and (max-width:1550px) {
+.layer #imgContainer{
+width: 50% !important;
+height: 70% !important;
+}
+
+}
+
+
+/* ------ END OUR PORTFOLIO SECTION----------------------------------------------------------- */
+
+/* ------- START COUNT SECTION---------------------------------------------------- */
+#countSec {
+    background-color: #f1f1f1;
+}
+
+#countSec .row>div i {
+    color: var(--secColor);
+}
+
+
+/* ------- END COUNT SECTION---------------------------------------------------- */
+
+/* ------ START TESTIMONIAL SECTION ---------------------------------------------- */
+
+#Testimonial .carousel-inner>.carousel-item {
+    background-color: var(--thirdColor);
+    position: relative;
+}
+
+#Testimonial .carousel-inner>.carousel-item .testimonialCardRight a {
+    color: #777777;
+}
+
+#Testimonial .carousel-inner>.carousel-item .testimonialCardRight p {
+    color: var(--forthColor);
+}
+
+#Testimonial .carousel-inner>.carousel-item .testimonialCardRight .testimonialIcon {
+    color: #f1c30d;
+}
+
+#Testimonial .carousel-inner .testimonialLayer {
+    width: 8rem;
+    height: 17rem;
+    background-color: var(--secColor);
+    position: absolute;
+    top: -85px;
+    left: -48px;
+    transform: rotate(45deg);
+    z-index: 30;
+}
+
+#Testimonial .carousel-inner .testimonialImg img {
+    position: relative;
+    z-index: 40;
+    padding: 2rem;
+    transform: translateY(-20%);
+}
+
+.carousel-indicators {
+    bottom: -30%;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: var(--secColor);
+    border: 1px solid var(--secColor);
+    border-radius: 45%;
+    display: inline-block;
+    height: 10px;
+    margin: 1.2rem .2rem;
+    width: 35px;
+}
+
+.carousel-indicators :not(.active) {
+    border-radius: 50%;
+    background-color: var(--mainColr);
+    width: 10px;
+
+}
+
+@media screen and (min-width:200px) and (max-width:500px) {
+    #Testimonial .carousel-inner .testimonialImg {
+        width: 50% !important;
+    }
+#Testimonial .carousel-inner .testimonialImg img {
+padding-bottom: 0rem;
+}
+#Testimonial .carousel-inner>.carousel-item .testimonialCardRight {
+   padding-inline: 2rem;
+}
+}
+
+
+@media screen and (min-width:500px) and (max-width:768px) {
+    #Testimonial .carousel-inner {
+        width: 90%;
+    }
+
+    #Testimonial .carousel-inner .testimonialImg {
+        width: 50%;
+        /* margin: auto; */
+        padding-inline: 0;
+        margin-bottom: 1.5rem;
+
+    }
+
+    #Testimonial .carousel-inner .testimonialImg img {
+        transform: translateY(40%);
+
+    }
+
+    #Testimonial .carousel-inner .testimonialLayer {
+        top: 2px;
+        left: -41px;
+    }
+    #carouselExampleIndicators  .carousel-item > div.row{
+        row-gap: 2rem;
+
+    }
+    #Testimonial .carousel-inner .testimonialLayer >div{
+    }
+    #Testimonial .carousel-inner>.carousel-item {
+        padding: 2rem;
+        transform: translateY(-20%);
+    }
+
+    .carousel-item {
+        background-color: #f1c30d;
+    }
+
+    .carousel-indicators {
+        bottom: 0%;
+    }
+}
+
+@media screen and (min-width:787px) and (max-width: 992px) {
+    #Testimonial .carousel-inner>.carousel-item {
+        padding: 0 2rem;
+    }
+
+    #Testimonial .carousel-inner {
+        width: 100%;
+    }
+
+    #Testimonial .carousel-inner .testimonialImg {
+        width: 80%;
+    }
+
+    #Testimonial .carousel-inner .testimonialImg img {
+        padding: 0;
+        transform: translateY(0%);
+    }
+
+}
+
+@media screen and (min-width:993px) and (max-width: 1200px) {
+    #Testimonial .carousel-inner {
+        width: 60%;
+    }
+
+    #Testimonial .carousel-inner .testimonialImg {
+        width: 140%;
+    }
+
+    #Testimonial .carousel-inner .testimonialImg img {
+        transform: translateY(0%);
+    }
+
+}
+
+@media screen and (min-width:1201px) and (max-width: 1550px) {
+    #Testimonial .carousel-inner {
+        width: 65%;
+    }
+
+    #Testimonial .carousel-inner .testimonialImg {
+        width: 100%;
+    }
+
+    #Testimonial .carousel-inner .testimonialImg img {
+        transform: translateY(0%);
+    }
+}
+
+
+
+/* ------ END TESTIMONIAL SECTION ---------------------------------------------- */
+
+/* ----------- START OUR BLOG SECTION------------------------------------------------------------------------------ */
+#Blog {
+    background-color: var(--thirdColor);
+}
+
+.blogItem {
+    background-color: var(--mainColr);
+}
+
+#Blog .blogLink:hover {
+    color: var(--secColor) !important;
+}
+
+#Blog .blogLink {
+    transition: all 0.5s;
+}
+
+@media screen and (min-width:500px) and (max-width:768px) {
+    #Blog .container>.row {
+        width: 80%;
+        margin: auto;
+    }
+
+     #blogIframe > iframe{
+        max-width: 375px !important;
+        min-width: 375px !important;
+        max-height: 248px!important;
+        min-height: 248px!important;
+
+    }
+
+}
+
+@media screen and (min-width:769px) and (max-width:992px) {
+    #Blog .blogItem #blogIframe body {
+        max-width: 231px !important;
+        max-height: 130px!important;
+        background-color: var(--mainColr) !important;
+    }
+    #Blog .blogItem #blogIframe ,
+    #blogIframe > iframe    {
+        max-width: 231px !important;
+        min-width: 231px !important;
+        max-height: 130px!important;
+        min-height: 130px !important;
+        margin-bottom: 0.5rem;
+    }
+
+}
+
+@media screen and (min-width:993px) and (max-width:1200px) {
+    #Blog .blogItem #blogIframe body {
+        max-width: 312px !important;
+        max-height: 175.2px!important;
+        min-height: 175.2px!important;
+        background-color: var(--mainColr) !important;
+    }
+    #Blog .blogItem #blogIframe , #blogIframe > iframe {
+        min-width: 312px !important;
+        max-width: 312px !important;
+        max-height: 175.2px!important;
+        min-height :175.2px !important;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media screen and (min-width:1201px) and (max-width :1400px) {
+    #Blog .blogItem #blogIframe , #blogIframe > iframe {
+        min-width: 372px !important;
+        max-width: 372px !important;
+        max-height: 208px!important;
+        min-height :208px !important;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media screen and (min-width:1401px) and (max-width:1550px) {
+    #Blog .blogItem #blogIframe , #blogIframe > iframe {
+        min-width: 330px !important;
+        max-width: 330px !important;
+        max-height: 185px!important;
+        min-height :185px !important;
+        margin-bottom: 0.5rem;
+    }
+    #Blog .container>.row {
+        width: 80%;
+        margin: auto;
+    }
+
+}
+
+
+
+
+/* ----------- END OUR BLOG SECTION------------------------------------------------------------------------------ */
+
+/* ------------ START CONTACT US SECTION----------------------------------------------------------------------- */
+#Contact input,
+textarea {
+    margin-bottom: 1.5rem;
+    padding: 0.4rem;
+    border-radius: 5px;
+    border-width: 1px;
+    display: block;
+    width: 100%;
+}
+
+#Contact input:focus {
+    outline-color: #a94442 !important;
+    border-color: var(--mainColr) !important;
+}
+
+#Contact #contactBtn {
+    background-color: var(--secColor);
+    color: var(--mainColr);
+    border: 1px solid var(--mainColr);
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+#Contact #contactBtn:hover #btnLayer {
+    /* background-color: #EC2403 !important; */
+    left: 0%;
+}
+
+#btnLayer {
+    width: 150px;
+    height: 200px;
+    background-color: rgba(243, 78, 78, 0.2);
+    transform: rotate(45deg);
+    position: absolute;
+    top: -260%;
+    left: -130%;
+    transition: all 1s;
+}
+
+
+@media screen and (min-width:200px) and (max-width:500px) {
+    #contactInput {
+        column-gap: 1rem ;
+    }
+}
+
+@media screen and (min-width:500px) and (max-width:768px) {
+    #contactInput {
+        flex-wrap: wrap;
+    }
+
+}
+
+@media screen and (min-width:1401px) and (max-width:1550px) {
+    #Blog .container>.row {
+        width: 80%;
+        margin: auto;
+    }
+
+    #Contact>.container {
+        width: 60% !important;
+    }
+
+}
+
+
+
+
+/* ------------ END CONTACT US SECTION----------------------------------------------------------------------- */
+
+/* ------- START FOOTER SECTION ----------------------------------------------------------------------- */
+#footer {
+    background-color: var(--fifthColor);
+    color: var(--mainColr);
+    letter-spacing: 0.055rem;
+}
+
+#footer ul [href] {
+    color: var(--mainColr);
+    padding: 1rem;
+    font-size: 1.1rem;
+    transition: all 0.5s;
+    /* margin-bottom: 1.5rem; */
+}
+
+#footer ul [href]:hover {
+    color: var(--secColor);
+}
+
+#footer [href='#'] {
+    color: var(--secColor);
+}
+
+
+/* ------- END FOOTER SECTION ----------------------------------------------------------------------- */
+
+
+#upBtn{
+    color: var(--secColor);
+    cursor: pointer;
+    display: none;
+}
